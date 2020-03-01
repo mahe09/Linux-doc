@@ -1,0 +1,172 @@
+=== 常用命令
+
+.list ls 列出指定目录文件
+----
+-l: 长格式
+    文件类型:
+        -: 普通文件 (file)
+        d: 目录 （dir） 
+        b: 块设备文件 (block)
+        c: 字条设备文件 （character）
+        l: 符号链接文件 (link)
+        p: 管道命令文件 (pipe)
+        s: 套接字文件 (socket)
+-h: 做单位转换
+-a: 显示隐藏文件
+-A:
+-d: 显示目录自身属性
+-i: index node 
+-R: 递归显示
+-r: 逆序显示
+----
+
+.cd change directory
+----
+cd ~username: 去指定用户家目录
+cd - :在当前目录和前一次目录来回切换
+----
+
+. type 显示指定数据哪种类型
+.date 时间管理
+----
+Liunx : rtc +
+   硬件时钟 hwclick+ 
+   软件时钟
+click
+hwclick 
+cal
+----
+
+
+.获取命令使用帮助
+----
+内部命令：help commant
+外部命令：command --help
+命令手册：manual
+  man command
+  whatis command 显示那个章节
+命令分章节
+  1：用户命令
+  2：系统调用
+  3：库用户
+  4：特殊文件（设备文件）
+  5：文件格式 解释命令配置文件语法
+  6：游戏
+  7：杂项
+  8：管理命令 （/sbin /usr/sbin /usr/local/sbin）
+----
+.命令解释
+----
+<> : 必选
+[] : 可选
+... : 可出现多次
+{} : 分组
+----
+.man 快捷键 /info command /usr/share/doc 文档目录
+----
+翻屏：
+    向后翻一屏：space
+    向前翻一屏：b
+    向后翻一行：enter
+    向前翻一行：k
+查找：
+    /keywords: 向后
+        n: next
+        N: 前一个
+    ？keywords: 向前
+        n: next
+        N: 前一个
+    q 退出
+----
+
+==== 文件系统
+/boot 系统启动文件 如内核、initrd,以及bootloader +
+/dev: 设备文件 包括块设备、字符设备、设备号 +
+/etc: 配置文件 +
+/home 用户主目录 +
+/root: 管理员目录 +
+/lib: 库文件 +
+/media: 挂载点，移动设备 +
+/mnt: 挂载点，额外的临时文件系统 +
+/opt: 可选目录，第三方安装程序 +
+/sys: 伪文件系统，跟硬件设备相关属性的映射文件 +
+/tmp: 临时目录 +
+/var: 可变化文件 +
+/bin: 可执行文件 +
+/sbin: 管理命令
+
+==== mkdir 
+. -p 创建多级目录
+. -v  显示详细信息
+. mkdir -pv /test/ab{1,3,4}
+
+==== rmdir -p 删除空目录
+==== touch 创建文件 修改文件属性
+. -a 改变access date
+. -c 改变时间
+. -m 修改时间
+. -t 指定修改时间
+
+==== stat 查看文件属性 
+
+==== rm -i -f -r
+
+==== cp copy -r -i -f  -p 保留文件模式 属组 属组 时间戳 -a 归档复制 常用于备份
+
+==== install 复制文件 复制之后默认加x
+
+==== mv 移动
+
+==== 文本查看 cat (-a -E) tac more less head tail cut sort uniq grep egrep fgrep wc 
+. cat -d -f1 
+. sort -n 数字大小排序 -r 倒序 -t 字段分隔符 -k 那个字段排序 -u 过滤相同行 -f 不区分字符大小写
+. uniq -c 显示重复次数 -d 只显示重复行
+. tr 转换或删除字符 tr 'a-z' 'A-Z' /path/to/file tr -d 'a' /path/to/file 删除指定字符
+
+==== 文本处理 cut sed join awk
+
+==== 目录管理 ls cd pwd mkdir rmdir tree
+
+==== 日期命令 date click hwclick cal
+
+==== shell 相关特性
+. 命令历史
+. 管道 重定向
+. 文件别名
+. 命令行编辑
+. 命令行展开
+. 文件名通配
+. 变量
+. 编程
+----
+ctrl+a 行首 
+ctrl+e 行尾
+ctrl+u 删除光标行首
+ctrl+k 删除光标至行尾
+history -c 清空命令 -d 删除指定位置 -w 将缓冲区写到文件
+环境变量 PATH HISTSIZE
+!$ ESC 松开 按. 引用前一个命令参数
+alias cmdalias='command [options] [args]'
+unalias 撤销别名
+\command 不执行别名
+命令替换 $(command) `command` 
+"": 弱引用 可以实现变量替换
+‘’： 强引用 变量替换
+文件名通配符 globbing
+*: 任意字符
+？：任意一个字符
+[]: 指定任意范围内的单个字符
+[^]: 配置范围外的任意单个字符
+[[:space:]] [[:punct:]] [:lower:] [:upper:] [:alpha:] [:digit:] [:alnum:]
+----
+
+
+
+
+
+
+
+
+
+
+

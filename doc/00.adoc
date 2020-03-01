@@ -1,0 +1,55 @@
+=== 操作系统
+
+早期CPU::
+
+. alpha
+. UltraSparc
+. power
+. M68000 M68K
+. PowerPc
+
+os::
+
+. Windows
+. Liunx
+. Unix
+ * HP-UX
+ * Solaris
+ * AIX
+ * SCO Unix
+ * Unixware
+
+ os内核功能::
+ . 进程管理
+ . 内存管理
+ . 文件管理
+ . 网络管理
+ . 硬件驱动管理
+ . 安全机制
+
+liunx基本原则::
+. 由目的单一小程序组成
+. 一切皆文件
+. 尽量避免捕获用户接口
+. 配置文件保存为纯文本格式
+
+liunx用户接口::
+. GUI接口
+* Gnome :c
+* KDE :c++
+* XFace
+. CLI接口
+* 命令提示符，prompt,bash 
+** #：表示root
+** $: 表示普通用户
+. 命令格式
+* 命令 选项 参数 选项分为短选项 可以组合使用 -a -b = -ab
+* 参数 命令的作用对象
+
+Liunx shell::
+ sh + 
+ bash + 
+ csh +
+ zsh +
+ ksh +
+ tcsh 
