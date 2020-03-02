@@ -152,6 +152,9 @@
 .. /dev 主设备号 次设备号
 .. mknod 创建设备文件 
 ... -m mode  mknod -m 640 mydev c 66 0
+. 管理分区
+.. fdisk /dev/sda
+.. partprobe 内核重读分区
 
 
 

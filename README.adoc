@@ -1,5 +1,5 @@
 # Linux-doc
-:uri-project: https://github.com/mahe09/Linux-doc/blob/master/
+:uri-project: https://github.com/mahe09/Linux-doc/blob/master
 :uri-doc: {uri-project}/doc
 
 == link:{uri-doc}/00.adoc[操作系统] 
